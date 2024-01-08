@@ -1,0 +1,47 @@
+.label {
+    margin-top: 25px;
+}
+
+.label button {
+    width: 1200px;
+    height: 181px;
+    background-color: #e6eef7;
+    border-radius: 5px;
+    border: 0;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.label button:hover {
+    cursor: pointer;
+}
+
+.label button img {
+    display: flex;
+    justify-content: start;
+    height: 181px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.label button .text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.label button .text p {
+    margin-top: 10px;
+    font-size: 1.25em;
+}
+
+.label button .text #tag {
+    margin-top: 10px;
+    font-size: 1.25em;
+    color: #12C5FE;
+    font-weight: bold;
+}
