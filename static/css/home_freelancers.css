@@ -1,6 +1,6 @@
 .label {
     width: 1243px;
-    margin-top: 25px;
+    margin-top: 105px;
 }
 
 .label button:nth-child(4n) {
@@ -16,6 +16,7 @@
     border: 0;
     border-radius: 5px;
     background-color: #e6eef7;
+    box-shadow: 0px 0px 10px #acb0b8;
 }
 
 .label button:hover {
