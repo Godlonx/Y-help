@@ -11,7 +11,10 @@ body {
 }
 
 header {
+    width: 100vw;
     position: fixed;
+    display: flex;
+    justify-content: center;
     padding-top: 15px;
     border-bottom: #e6eef7 solid 2px;
     background-color: #fff;
