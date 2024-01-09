@@ -36,6 +36,10 @@
     text-align: start;
 }
 
+.label button .text span {
+    margin-top: 15px;
+}
+
 .label button h1 {
     font-size: 22px;
     font-weight: 700;
@@ -50,5 +54,14 @@
 
 .label button h4 {
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
+    color: #999999;
+}
+
+.checked {
+    color: orange;
+}
+
+.notchecked {
+    color: #acb0b8;
 }

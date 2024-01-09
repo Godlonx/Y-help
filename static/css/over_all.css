@@ -12,6 +12,8 @@ body {
 
 nav {
     margin-top: 15px;
+    border-bottom: #e6eef7 solid 2px;
+    padding-bottom: 15px;
 }
 
 nav .frame {
@@ -19,10 +21,10 @@ nav .frame {
     display: flex;
 }
 
-nav .frame > h1 {
+nav .frame > img {
     margin-right: auto;
-    font-size: 2em;
-    font-weight: 900;
+    width: 112px;
+    height: 45px;
 }
 
 nav .frame > button {
