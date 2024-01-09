@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/project.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="board">
+        <div class="primary">
+            <h1 class="title">{{data['title']}}</h1>
+            <div class="highlights">
+                <img src="{{data['highlight'][0]}}" alt="" class="overview">
+                <div class="minimize">
+                    <div class="left"></div>
+                    <div class="miniOverviews">
+                        {% for val in data['highlight'] %}
+                        <div class="miniOverview">
+                            <div class="arrow"></div>
+                            <img src="{{val}}" alt="" class="little">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="right"></div>
+                </div>           
+            </div>
+            <p class="summary">{{data['summary']}}</p>
+            <div class="tags">{% for tag in data['tags'] %}<p class="tag">{{tag}}</p>{% endfor %}</div>
+            <h3>Project</h3>
+            <p class="description">{{data['description']}}</p>
+        </div> 
+        <div class="secondary">
+            <img src="{{data['user']['picture']}}" alt="">
+            <h4 class="name">{{data['user']['name']}}</h4>
+            {% for info in data['user']['supInfo'] %}
+            <p class="supInfo">{{info}}</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

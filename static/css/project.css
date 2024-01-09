@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.board {
+    /* outline: orange solid 3px; */
+    margin-left: 15vw;
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.primary {
+    outline: green solid 3px;
+    width: 50vw;
+}
+
+.board .primary .title {
+    outline: red solid 3px;
+}
+
+.board .primary .highlights {
+    background-color: #c0c6cf;
+    border-radius: 10px;
+}
+
+.board .primary .highlights .overview {
+    width: 100%;
+}
+
+.board .primary .highlights .minimize {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    align-items: center;
+    height: 70px;
+}
+
+.board .primary .highlights .minimize .left {
+        width: 0; 
+        height: 0; 
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent; 
+        
+        border-right:20px solid rgb(0, 0, 0);
+        margin-right: 5px;
+}
+
+.board .primary .highlights .miniOverviews {
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    height: 100%;
+}
+
+.board .primary .highlights .minimize .miniOverviews .miniOverview {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+} 
+
+.board .primary .highlights .minimize .arrow {
+    width: 0; 
+    height: 0; 
+    border-bottom: 10px solid #262323;
+    border-left: 15px solid transparent; 
+    border-right:15px solid transparent;
+}
+
+.board .primary .highlights .miniOverviews .little {
+    background-color: black;
+    height: 100%;
+}
+
+.secondary {
+    outline: blue solid 3px;
+    width: 20vw;
+    margin-left: 15px;
+}
+
+.secondary img {
+    width: 100%;
+    border-radius: 15px;
+}
