@@ -10,20 +10,8 @@
     <div class="board">
         <div class="primary">
             <h1 class="title">{{data['title']}}</h1>
-            <div class="highlights">
-                <img src="{{data['highlight'][0]}}" alt="" class="overview">
-                <div class="minimize">
-                    <div class="left"></div>
-                    <div class="miniOverviews">
-                        {% for val in data['highlight'] %}
-                        <div class="miniOverview">
-                            <div class="arrow"></div>
-                            <img src="{{val}}" alt="" class="little">
-                        </div>
-                        {% endfor %}
-                    </div>
-                    <div class="right"></div>
-                </div>           
+            <div class="highlight">
+                <img src="{{data['highlight']}}" alt="">
             </div>
             <p class="summary">{{data['summary']}}</p>
             <div class="tags">{% for tag in data['tags'] %}<p class="tag">{{tag}}</p>{% endfor %}</div>

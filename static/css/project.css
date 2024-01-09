@@ -11,73 +11,30 @@ body {
 }
 
 .primary {
-    outline: green solid 3px;
+    background-color: #f0f0f0;
+    padding: 10px;
     width: 50vw;
+    border-radius: 30px;
 }
 
-.board .primary .title {
-    outline: red solid 3px;
-}
-
-.board .primary .highlights {
-    background-color: #c0c6cf;
-    border-radius: 10px;
-}
-
-.board .primary .highlights .overview {
-    width: 100%;
-}
-
-.board .primary .highlights .minimize {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    padding-bottom: 5px;
-    align-items: center;
-    height: 70px;
-}
-
-.board .primary .highlights .minimize .left {
-        width: 0; 
-        height: 0; 
-        border-top: 20px solid transparent;
-        border-bottom: 20px solid transparent; 
-        
-        border-right:20px solid rgb(0, 0, 0);
-        margin-right: 5px;
-}
-
-.board .primary .highlights .miniOverviews {
-    display: flex;
-    flex-direction: row;
-    gap: 1px;
-    height: 100%;
-}
-
-.board .primary .highlights .minimize .miniOverviews .miniOverview {
+.board .primary .highlight {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    height: 100%;
-} 
-
-.board .primary .highlights .minimize .arrow {
-    width: 0; 
-    height: 0; 
-    border-bottom: 10px solid #262323;
-    border-left: 15px solid transparent; 
-    border-right:15px solid transparent;
+    background-color: #D9D9D9;
+    height: 25vw;
 }
 
-.board .primary .highlights .miniOverviews .little {
-    background-color: black;
+.board .primary .highlight img {
     height: 100%;
 }
 
 .secondary {
-    outline: blue solid 3px;
-    width: 20vw;
-    margin-left: 15px;
+    width: 15vw;
+    padding: 15px;
+    background-color: #a2dec0;
+    height: 350px;
+    border-radius: 25px;
+    border-bottom-left-radius: 0px;
 }
 
 .secondary img {
