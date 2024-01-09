@@ -1,0 +1,53 @@
+.label {
+    margin-top: 25px;
+}
+
+.label button {
+    width: 1243px;
+    height: 215px;
+    background-color: #e6eef7;
+    border-radius: 5px;
+    border: 0;
+
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 25px;
+}
+
+.label button:hover {
+    cursor: pointer;
+}
+
+.label button:active {
+    opacity: 75%;
+}
+
+.label button img {
+    display: flex;
+    justify-content: start;
+    height: 215px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.label button .text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.label button .text p {
+    margin-top: 10px;
+    font-size: 1.25em;
+}
+
+.label button .text #tag {
+    margin-top: 10px;
+    font-size: 1.25em;
+    color: #12C5FE;
+    font-weight: bold;
+}
