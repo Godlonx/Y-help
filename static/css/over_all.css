@@ -10,24 +10,24 @@ body {
     align-items: center;
 }
 
-nav {
+header {
     margin-top: 15px;
     border-bottom: #e6eef7 solid 2px;
     padding-bottom: 15px;
 }
 
-nav .frame {
+header .frame {
     width: 1243px;
     display: flex;
 }
 
-nav .frame > img {
+header .frame > img {
     margin-right: auto;
     width: 112px;
     height: 45px;
 }
 
-nav .frame > button {
+header .frame > button {
     padding: 8px 15px;
     border: 0;
     background-color: #fff;
@@ -36,7 +36,7 @@ nav .frame > button {
     font-weight: 600;
 }
 
-nav .frame > button:hover {
+header .frame > button:hover {
     cursor: pointer;
     background-color: #e6eef7;
     border-radius: 5px;
