@@ -1,10 +1,12 @@
 .container {
+    display: flex;
     width: 1243px;
-    margin-top: 35px;
+    margin-top: 103px;
 }
 
 .card {
     width: 300px;
+    position: fixed;
 }
 
 .card img {
@@ -15,11 +17,11 @@
 
 .card h1 {
     margin-top: 15px;
-    font-size: 50px;
+    font-size: 35px;
 }
 
 .card h4 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     color: #808080;
     margin-bottom: 25px;
@@ -54,4 +56,14 @@
 
 .container .card button:hover {
     cursor: pointer;
+}
+
+.description {
+    width: 893px;
+    margin-left: auto;
+}
+
+.description p {
+    font-size: 20px;
+    margin-bottom: 50px;
 }

@@ -11,8 +11,10 @@ body {
 }
 
 header {
-    margin-top: 15px;
+    position: fixed;
+    padding-top: 15px;
     border-bottom: #e6eef7 solid 2px;
+    background-color: #fff;
     padding-bottom: 15px;
 }
 
@@ -31,7 +33,7 @@ header .frame > button {
     padding: 8px 15px;
     border: 0;
     background-color: #fff;
-    margin-left: 25px;
+    margin-left: 15px;
     font-size: 1.5em;
     font-weight: 600;
 }
