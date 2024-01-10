@@ -1,10 +1,12 @@
 from flask import Flask, render_template
+from query import *
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 @app.route("/")
 def home():
-    return render_template('home_projects.html')
+    data = query("SELECT * FROM Project WHERE idProject = 2")
+    return render_template('home_projects.html', data=data)
 
 @app.route("/projects")
 def projects():
