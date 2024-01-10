@@ -3,7 +3,7 @@ body {
 }
 
 .board {
-    margin-top: 20px;
+    margin-top: 100px;
     /* outline: orange solid 3px; */
     margin-left: 70px;
     width: 70vw;
@@ -28,6 +28,7 @@ body {
 
 .board .primary .highlight img {
     height: 100%;
+    border-radius: 5px;
 }
 
 .card {

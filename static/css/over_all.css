@@ -25,25 +25,40 @@ header {
 header .frame {
     width: 1243px;
     display: flex;
+    justify-content: space-between;
 }
 
 header .frame > img {
-    margin-right: auto;
     width: 112px;
     height: 45px;
+    cursor: pointer;
 }
 
-header .frame > button {
+header .frame .buttons > button {
     padding: 8px 15px;
     border: 0;
     background-color: #fff;
-    margin-left: 15px;
     font-size: 1.5em;
     font-weight: 600;
+    border-radius: 5px;
 }
 
-header .frame > button:hover {
+header .frame .buttons > button:hover {
     cursor: pointer;
     background-color: #e6eef7;
+}
+
+#create {
+    padding: 8px 15px;
+    border: 0;
     border-radius: 5px;
+    background-color: #10c2b0;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#create:active {
+    background-color: #0da394;
 }
