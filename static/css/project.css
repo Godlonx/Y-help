@@ -5,7 +5,7 @@ body {
 .board {
     margin-top: 20px;
     /* outline: orange solid 3px; */
-    margin-left: 15vw;
+    margin-left: 70px;
     width: 70vw;
     display: flex;
     flex-direction: row;
@@ -30,17 +30,54 @@ body {
     height: 100%;
 }
 
-.secondary {
-    width: 15vw;
+.card {
+    width: 300px;
     padding: 15px;
-    /* background-color: #33E1CF; */
     height: 350px;
     border-radius: 25px;
     /* border-bottom-left-radius: 0px; */
 }
 
-.secondary img {
-    width: 100%;
+.card .picture {
+    width: 250px;
     border-radius: 15px;
     box-shadow: 0px 0px 10px #acb0b8;
+}
+
+.card h1 {
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+.card h4 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #808080;
+}
+
+.card .level {
+    margin-top: 20px;
+}
+
+.card .info {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.card .info button {
+    display: flex;
+    border: none;
+    background-color: #33E1CF;
+    width: 47px;
+    height: 47px;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .info img{
+    width: 35px;
 }

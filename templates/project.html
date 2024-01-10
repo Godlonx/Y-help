@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/project.css">
     <link rel="stylesheet" href="../static/css/over_all.css">
+    <script src="../static/js/project.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -26,12 +27,18 @@
             <h3>Project</h3>
             <p class="description">{{data['description']}}</p>
         </div> 
-        <div class="secondary">
-            <img src="{{data['user']['picture']}}" alt="">
-            <h4 class="name">{{data['user']['name']}}</h4>
-            {% for info in data['user']['supInfo'] %}
-            <p class="supInfo">{{info}}</p>
-            {% endfor %}
+        <div class="card">
+            <img src="{{data['user']['picture']}}" alt="" class="picture">
+            <h1 class="name">{{data['user']['name']}}</h1>
+            <h4 class="level">{{data['user']['level']}}</h4>
+            <div class="mail info">
+                <button onclick="copy('mail')" value="{{data['user']['mail']}}" id="mail"><img src="../static/images/mail.png" alt=""></button>
+                <h4>{{data['user']['mail']}}</h4>
+            </div>
+            <div class="phone info">
+                <button onclick="copy('phone')" value="{{data['user']['phone']}}" id="phone"><img src="../static/images/mail.png" alt=""></button>
+                <h4>{{data['user']['phone']}}</h4>
+            </div>
         </div>
     </div>
 </body>
