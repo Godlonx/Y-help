@@ -12,6 +12,7 @@ body {
 }
 
 header {
+    z-index: 1;
     width: 100vw;
     position: fixed;
     display: flex;
