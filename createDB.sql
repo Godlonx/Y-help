@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS User
     level INTEGER,
     class VARCHAR,
     phone VARCHAR(8),
+    picture VARCHAR,
     mdpHash VARCHAR,
     PRIMARY KEY (id)
 );
@@ -17,6 +18,7 @@ CREATE TABLE IF NOT EXISTS Project
     name VARCHAR,
     summary VARCHAR,
     description VARCHAR,
+    picture VARCHAR,
     PRIMARY KEY (idProject)
 );
 
@@ -48,10 +50,10 @@ CREATE TABLE IF NOT EXISTS Tag
 
 CREATE TABLE IF NOT EXISTS TagRelation
 (
-    idUSer INTEGER,
+    idProject INTEGER,
     idTag INTEGER,
-    FOREIGN KEY (idUser) REFERENCES User(id),
+    FOREIGN KEY (idProject) REFERENCES User(id),
     FOREIGN KEY (idTag) REFERENCES Tag(id),
-    PRIMARY KEY (idUser, idTag)
+    PRIMARY KEY (idProject, idTag)
 );
 
