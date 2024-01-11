@@ -17,9 +17,10 @@ header {
     display: flex;
     justify-content: center;
     padding-top: 15px;
-    border-bottom: #e6eef7 solid 2px;
+    border-bottom: #bce6e2 solid 2px;
     background-color: #fff;
     padding-bottom: 15px;
+    box-shadow: 0px 0px 8px #9de6de;
 }
 
 header .frame {
