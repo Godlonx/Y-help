@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/project.css">
     <link rel="stylesheet" href="../static/css/over_all.css">
+    <script src="../static/js/project.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,9 +26,9 @@
     </header>
     <div class="board">
         <div class="primary">
-            <h1 class="title">{{data['title']}}</h1>
+            <h1 class="title">{{data['name']}}</h1>
             <div class="highlight">
-                <img src="{{data['highlight']}}" alt="">
+                <img src="{{data['highlight']}}" alt="not Here">
             </div>
             <p class="summary">{{data['summary']}}</p>
             <div class="tags">{% for tag in data['tags'] %}<p class="tag">{{tag}}</p>{% endfor %}</div>
@@ -35,16 +36,16 @@
             <p class="description">{{data['description']}}</p>
         </div> 
         <div class="card">
-            <img src="{{data['user']['picture']}}" alt="" class="picture">
-            <h1 class="name">{{data['user']['name']}}</h1>
-            <h4 class="level">{{data['user']['level']}}</h4>
+            <img src="{{data['userpicture']}}" alt="" class="picture">
+            <h1 class="name">{{data['pseudo']}}</h1>
+            <h4 class="level">{{data['level']}}</h4>
             <div class="mail info">
-                <button onclick="copy('mail')" value="{{data['user']['mail']}}" id="mail"><img src="../static/images/mail.png" alt=""></button>
-                <h4>{{data['user']['mail']}}</h4>
+                <button onclick="copy('mail')" value="{{data['email']}}" id="mail"><img src="../static/images/mail.png" alt=""></button>
+                <h4>{{data['email']}}</h4>
             </div>
             <div class="phone info">
-                <button onclick="copy('phone')" value="{{data['user']['phone']}}" id="phone"><img src="../static/images/mail.png" alt=""></button>
-                <h4>{{data['user']['phone']}}</h4>
+                <button onclick="copy('phone')" value="{{data['phone']}}" id="phone"><img src="../static/images/mail.png" alt=""></button>
+                <h4>{{data['phone']}}</h4>
             </div>
         </div>
     </div>
