@@ -14,14 +14,18 @@ def query(req):
 
     return cleaned_data
 
-def queryProject(req):
-    folders = ['id','leader Id','name','summary','description']
+def queryProject(id):
+    folders = ['name','summary','description','pseudo','level','class','email','phone']
     clearData = {}
-    datas = query("SELECT * FROM Project")
-
+    datas = query(f"SELECT p.name, p.summary, p.description, u.pseudo, u.level, u.class, u.email, u.phone FROM Project as p JOIN User as u ON u.id = p.idLeader WHERE p.idProject = {id}")
+    tags = query(f"SELECT tag.name FROM Tag JOIN TagRelation ON tag.id = TagRelation.idTag WHERE TagRelation.idProject = {id}")
     for index, data in enumerate(datas):
         clearData[folders[index]] = data
 
+    clearData['highlight'] = "/static/images/test.jpg"
+    clearData['userpicture'] = "/static/images/user.png"
+    clearData["level"] = 'B' if int(clearData['level']) > 5 else 'Master '+clearData['level']+" "+clearData["class"]
+    clearData["tags"] = tags
     return clearData
 
 def queryHomeProject():
