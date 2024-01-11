@@ -7,12 +7,12 @@ def query(req):
     
     cur.execute(req)
     data = cur.fetchall()
-
     con.close()
 
     cleaned_data = [str(item) for item in data[0]]
-
     return cleaned_data
+
+
 
 def queryProject(id):
     folders = ['name','summary','description','pseudo','level','class','email','phone']
@@ -27,6 +27,8 @@ def queryProject(id):
     clearData["level"] = 'B' if int(clearData['level']) > 5 else 'Master '+clearData['level']+" "+clearData["class"]
     clearData["tags"] = tags
     return clearData
+
+
 
 def queryHomeProject():
     folders = [0,'name','summary']

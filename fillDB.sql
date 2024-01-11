@@ -198,3 +198,8 @@ INSERT INTO TagRelation (idProject, idTag) VALUES
 (8, 13),
 (9, 14),
 (10, 15);
+
+
+INSERT INTO Freelancer (price, skill, description) VALUES
+(1, 'user1', 'user1@example.com'),
+(20, 'user20', 'user20@example.com');

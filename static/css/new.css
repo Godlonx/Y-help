@@ -1,9 +1,9 @@
 .container {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .btn {
@@ -32,17 +32,14 @@
 }
 
 .popup {
+    margin-top: 115px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-
-    width: 100vw;
+    width: 1243px;
     height: 100vh;
     background-color: #f0f0f0;
     position: absolute;
     top: 0;
-    left: 0;
     z-index: 0;
     visibility: hidden;
 }
