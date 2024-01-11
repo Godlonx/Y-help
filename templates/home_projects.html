@@ -27,7 +27,9 @@
         <div class="label">
             <button>
                 <img src="../static/images/project-icon-1.png" alt="project-icon">
-                {{data['name']}}
+                {% for item in data %}
+                    <p>{{ item }}</p><br>
+                {% endfor %}
                 <!--
                 <div class="text">
                     <h1>Legends of Arena</h1>
