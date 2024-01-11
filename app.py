@@ -1,14 +1,17 @@
 from flask import Flask, render_template
+from static.src.query import *
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 @app.route("/")
 def home():
-    return render_template('home_projects.html')
+    return projects()
 
 @app.route("/projects")
 def projects():
-    return render_template('home_projects.html')
+    data = queryHomeProject()
+    print(data)
+    return render_template('home_projects.html', data=data)
 
 @app.route("/project/<id>")
 def projet(id):
@@ -22,6 +25,10 @@ def freelancers():
 @app.route("/freelancer/<id>")
 def freelancer(id):
     return render_template('freelancer.html')
+
+@app.route("/new")
+def new():
+    return render_template('new.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
