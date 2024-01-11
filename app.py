@@ -5,12 +5,12 @@ app = Flask(__name__, template_folder='templates')
 
 @app.route("/")
 def home():
-    data = query("SELECT * FROM Project WHERE idProject = 2")
-    return render_template('home_projects.html', data=data)
+    return projects()
 
 @app.route("/projects")
 def projects():
-    return render_template('home_projects.html')
+    data = query("SELECT name FROM Project;")
+    return render_template('home_projects.html', data=data)
 
 @app.route("/project/<id>")
 def projet(id):

@@ -10,6 +10,4 @@ def query(query):
 
     con.close()
 
-    cleaned_data = [str(item[0]) for item in data]
-
-    return cleaned_data
+    return data[0] if data else ["ERROR"]
