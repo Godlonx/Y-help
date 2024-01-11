@@ -10,7 +10,6 @@ def home():
 @app.route("/projects")
 def projects():
     data = query("SELECT name, summary FROM Project")
-    print("\n\n\n=============================================\n\n\n", data, "\n\n\n=============================================\n\n\n")
     return render_template('home_projects.html', data=data)
 
 @app.route("/project/<id>")
@@ -25,6 +24,10 @@ def freelancers():
 @app.route("/freelancer/<id>")
 def freelancer(id):
     return render_template('freelancer.html')
+
+@app.route("/new")
+def new():
+    return render_template('new.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

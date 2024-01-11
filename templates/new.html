@@ -11,17 +11,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <title>Create</title>
+    <title>New Project/Freelancer</title>
 </head>
 <body>
     <header>
         <div class="frame">
-            <img src="../static/images/logo.png" alt="logo">
+            <img onclick="window.location.href='/'" src="../static/images/logo.png" alt="logo">
             <div class="buttons">
-                <button>Projects</button>
-                <button>Freelancers</button>
+                <button onclick="window.location.href='/projects'">Projects</button>
+                <button onclick="window.location.href='/freelancers'">Freelancers</button>
             </div>
-            <button id="create">New +</button>
+            <button id="create" onclick="window.location.href='/new'">New +</button>
         </div>
     </header>
 </body>
