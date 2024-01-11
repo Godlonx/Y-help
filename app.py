@@ -9,7 +9,8 @@ def home():
 
 @app.route("/projects")
 def projects():
-    data = query("SELECT name, summary FROM Project")
+    data = queryHomeProject()
+    print(data)
     return render_template('home_projects.html', data=data)
 
 @app.route("/project/<id>")
