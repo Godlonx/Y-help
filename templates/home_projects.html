@@ -21,21 +21,17 @@
                     <button>Projects</button>
                     <button>Freelancers</button>
                 </div>
-                <button id="create">Create +</button>
+                <button id="create">New +</button>
             </div>
         </header>
         <div class="label">
             {% for item in data %}
                 <button>
                     <img src="../static/images/project-icon-1.png" alt="project-icon">
-                    <p>{{ item }}</p>
-                    <!--
                     <div class="text">
-                        <h1>Legends of Arena</h1>
-                        <p>Legends of Arena, un jeu de combat en arène stratégique et passionnant ! Incarnez des classes de guerriers légendaires du monde entier à travers des auras magiques. Choisissez parmi une variété de classes RPG classiques, développez vos compétences, équipez-vous et battez-vous pour la gloire !</p>
-                        <div id="tag">#gamedev #indiegame #unity</div>
-                    </div>
-                    -->
+                        <h1>{{ item[0] }}</h1>
+                        <p>{{ item[1] }}</p>
+                        <!--<div id="tag">#gamedev #indiegame #unity</div>-->
                 </button>
             {% endfor %}
         </div>

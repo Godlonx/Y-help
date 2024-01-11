@@ -10,4 +10,4 @@ def query(query):
 
     con.close()
 
-    return data[0] if data else ["ERROR"]
+    return data if data else ["ERROR"]
