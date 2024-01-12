@@ -77,7 +77,7 @@ def queryHomeFreelancers():
     clearData = []
     for data in datas:
         bruteData = formatFiles(data, [0,'pseudo','level','class'])
-        bruteData["level"] = 'B'+str(bruteData['level'])+" "+bruteData["class"] if int(bruteData['level']) < 4 else 'Master '+str(bruteData['level']-3)+" "+bruteData["class"]
+        bruteData["level"] = 'B'+str(bruteData['level'])+" "+bruteData["class"] if int(bruteData['level']) < 4 else 'M'+str(bruteData['level']-3)+" "+bruteData["class"]
         clearData.append(bruteData)
     return clearData
 
@@ -88,6 +88,6 @@ def queryFreelancer(id):
 
     clearData = formatFiles(datas, ['pseudo','level','class','price','skill','description'])
     print("\n\n\n\n\n\n", clearData, "\n\n\n\n\n\n")
-    clearData["level"] = 'B'+str(clearData['level'])+" "+clearData["class"] if int(clearData['level']) < 4 else 'Master '+str(clearData['level']-3)+" "+clearData["class"]
+    clearData["level"] = 'B'+str(clearData['level'])+" "+clearData["class"] if int(clearData['level']) < 4 else 'M'+str(clearData['level']-3)+" "+clearData["class"]
 
     return clearData
