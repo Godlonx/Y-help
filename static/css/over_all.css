@@ -54,7 +54,7 @@ header .frame .buttons > button:hover {
     background-color: #e6eef7;
 }
 
-#create {
+#new {
     padding: 8px 15px;
     border: 0;
     border-radius: 5px;
@@ -65,7 +65,7 @@ header .frame .buttons > button:hover {
     cursor: pointer;
 }
 
-#create:active {
+#new:active {
     background-color: #0da394;
 }
 
