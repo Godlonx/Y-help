@@ -25,15 +25,16 @@
             </div>
         </header>
         <div class="label">
-            <button onclick='window.location.href="/project/{{data[0]}}"'>
-                <img src="../static/images/project-icon.png" alt="project-icon">
-                <div class="text">
-                    <h1>{{ data['name'] }}</h1>
-                    <p>{{ data['summary'] }}</p>
-                </div>
-                    <!--<div id="tag">#gamedev #indiegame #unity</div>-->
-                </div>
-            </button>
+            {% for project in data %}
+                <button onclick='window.location.href="/project/{{project[0]}}"'>
+                    <img src="../static/images/project-icon.png" alt="project-icon">
+                    <div class="text">
+                        <h1>{{ project['name'] }}</h1>
+                        <p>{{ project['summary'] }}</p>
+                    </div>
+                        <!--<div id="tag">#gamedev #indiegame #unity</div>-->
+                </button>
+            {% endfor %}
         </div>
     </body>
 </html>
