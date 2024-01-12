@@ -39,3 +39,14 @@ def queryHomeProject():
         clearData[folders[index]] = data
 
     return clearData
+
+
+def queryHomeFreelancer():
+    folders = [0,'name','summary']
+    clearData = {}
+    datas = query("SELECT idProject, name, summary FROM Project")
+
+    for index, data in enumerate(datas):
+        clearData[folders[index]] = data
+
+    return clearData
