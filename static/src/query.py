@@ -32,7 +32,7 @@ def queryProject(id):
 def queryHomeProject():
     folders = [0,'name','summary']
     clearData = {}
-    datas = query("SELECT idProject, name, summary FROM Project")
+    datas = query("SELECT idProject, name, summary FROM Project")[0]
 
     for index, data in enumerate(datas):
         clearData[folders[index]] = data
