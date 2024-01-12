@@ -30,8 +30,6 @@
         <div class="container">
             <button type="submit" class="btn" onclick="openPopup('popup-project')">New Project +</button>
             <div class="popup" id="popup-project">
-                <h2>New Project</h2>
-                <p>Fill in the following fields:</p>
                 <form method="post" action="/new" enctype="multipart/form-data">
                     <input name="status" value="project" hidden>
                     <div class="name">
@@ -52,10 +50,6 @@
             </div>
             <button type="submit" class="btn" onclick="openPopup('popup-freelancer')">New Freelancer +</button>
             <div class="popup" id="popup-freelancer">
-                <div>
-                    <h2 class="title">New Freelancer</h2>
-                    <p>Fill in the following fields:</p>
-                </div>
                 <form method="post">
                     <input name="status" value="freelancer" hidden>
                     <div class="price">
