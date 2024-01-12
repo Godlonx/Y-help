@@ -16,7 +16,7 @@ def projects():
 @app.route("/project/<id>")
 def projet(id):
     data = queryProject(id)
-    print(data.keys())
+    print(data['tags'])
     return render_template('project.html', data=data)
 
 @app.route("/freelancers")

@@ -19,6 +19,11 @@ body {
     border-radius: 30px;
 }
 
+.board .primary .summary {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
 .board .primary .highlight {
     display: flex;
     justify-content: center;
@@ -29,6 +34,27 @@ body {
 .board .primary .highlight img {
     height: 100%;
     border-radius: 5px;
+}
+
+.board .primary .tags {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-left: 25px;
+    margin-top: 20px;
+    color: #12C5FE;
+}
+
+.board .primary .project {
+    margin-top: 15px;
+}
+
+.board .primary .project h3 {
+    font-size: 20px;
+}
+
+.board .primary .project .description {
+    font-size: 18px;
 }
 
 .card {
@@ -81,4 +107,46 @@ body {
 
 .card .info img{
     width: 35px;
+}
+
+.card .info .mail .mailValid {
+    position: absolute;
+    visibility:hidden;
+    transform: translateX(-50px);
+}
+
+.card .info .mail .not {
+    transform: translateX(0px);
+    visibility: visible;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+.card .info .mail .notHide{
+    display: flex;
+}
+
+.card .info .mail .hide {
+    display: none;
+}
+
+.card .info .phone .phoneValid {
+    position: absolute;
+    visibility:hidden;
+    transform: translateX(-50px);
+}
+
+.card .info .phone .not {
+    transform: translateX(0px);
+    visibility: visible;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+.card .info .phone .notHide{
+    display: flex;
+}
+
+.card .info .phone .hide {
+    display: none;
 }
