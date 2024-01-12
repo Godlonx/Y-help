@@ -139,6 +139,7 @@ INSERT INTO User (id, pseudo, email, level, class, phone, mdpHash) VALUES
 (18, 'user18', 'user18@example.com', 3, 'Market-Communication', '6475839250', 'hashrst'),
 (19, 'user19', 'user19@example.com', 2, '3D-Animation', '3847562950', 'hashuvw'),
 (20, 'user20', 'user20@example.com', 5, 'Web-Design', '7192843650', 'hashxyz');
+(21, 'userTest', 'userTest@example.com', 5, 'Informatique', '0543685215', 'hashxyz');
 
 INSERT INTO Tag (id, name) VALUES
 (1, 'Programming'),

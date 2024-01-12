@@ -3,8 +3,8 @@ from static.src.query import *
 
 app = Flask(__name__, template_folder='templates')
 
-LOCALID = 21
-LOCALIDPROJECT = 11
+# Cette valeur correspond a l'id de l'utilisatuer que l'on recuperera automatiquement avec la connexion a ynov mais pas encore presente. 
+CUCRBITACEAE= 21
 
 @app.route("/")
 def home():
@@ -13,7 +13,6 @@ def home():
 @app.route("/projects")
 def projects():
     data = queryHomeProject()
-    print(data)
     return render_template('home_projects.html', data=data)
 
 @app.route("/project/<id>")
@@ -41,13 +40,13 @@ def new():
             name = request.form['name']
             summary = request.form['summary']
             description = request.form['description']
-            insertProject((LOCALIDPROJECT, 4, name, summary, description, "test"))
+            insertProject((4, name, summary, description, "test"))
 
         elif status == "freelancer":
             price = request.form['price']
             skill = request.form['skill']
             description = request.form['description']
-            insertFreelancer((LOCALID, skill, description, price))
+            insertFreelancer((CUCRBITACEAE, skill, description, price))
     return render_template('new.html')
 
 if __name__ == '__main__':

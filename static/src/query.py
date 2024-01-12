@@ -4,12 +4,9 @@ import sqlite3
 def query(req):
     con = sqlite3.connect("DB.db")
     cur = con.cursor()
-
     cur.execute(req)
     data = cur.fetchall()
-    print(data)
     con.close()
-
     return data
 
 
@@ -21,7 +18,6 @@ def queryProject(id):
     tags = query(f"SELECT tag.name FROM Tag JOIN TagRelation ON tag.id = TagRelation.idTag WHERE TagRelation.idProject = {id}")
     tags = ['#'+tag[0] for tag in tags]
     clearData = formatFiles(datas, folders)
-
     clearData['highlight'] = "/static/images/test.jpg"
     clearData['userpicture'] = "/static/images/user.png"
     clearData["level"] = 'B'+str(clearData['level'])+" "+clearData["class"] if int(clearData['level']) < 4 else 'Master '+str(clearData['level']-3)+" "+clearData["class"]
@@ -35,16 +31,13 @@ def queryHomeProject():
     clearData = []
     for data in datas:
         clearData.append(formatFiles(data, [0,'name','summary']))
-
     return clearData
 
-def queryHomeFreelancer():
-    pass
 
-def formatFiles(datas, keys):
+def formatFiles(datas, Cabinet):
     clearData = {}
     for index, data in enumerate(datas):
-        clearData[keys[index]] = data
+        clearData[Cabinet[index]] = data
     return clearData
 
 
@@ -53,9 +46,8 @@ def insertProject(data):
     con = sqlite3.connect('DB.db')
     cursor = con.cursor()
     data = (data[0], data[1], data[2], data[3], data[4], data[5])
-    cursor.execute(f"INSERT INTO Project (idProject, idLeader, name, summary, description, picture) VALUES (?, ?, ?, ?, ?, ?)", data)
+    cursor.execute(f"INSERT INTO Project (idLeader, name, summary, description, picture) VALUES (?, ?, ?, ?, ?)", data)
     con.commit()
-    print("inserted")
     cursor.close()
     con.close()
 
