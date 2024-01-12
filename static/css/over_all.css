@@ -68,3 +68,15 @@ header .frame .buttons > button:hover {
 #create:active {
     background-color: #0da394;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #bebebe;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+}

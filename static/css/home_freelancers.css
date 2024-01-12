@@ -1,6 +1,7 @@
 .label {
     width: 1243px;
     margin-top: 105px;
+    margin-bottom: 50px;
 }
 
 .label button:nth-child(4n) {
