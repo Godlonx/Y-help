@@ -13,7 +13,10 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <title>***NAME-FREELANCER***</title>
+        <link rel="icon" type="image/x-icon" href="../static/favicon/ynov.png">
+        {% for item in data %}
+            <title>{{ item[0] }}</title>
+        {% endfor %}
     </head>
     <body>
         <header>
@@ -42,9 +45,9 @@
                 </div>
                 <div class="description">
                     <h1>Skills</h1>
-                    {{ item[4] }}
+                    <p>{{ item[4] }}</p>
                     <h1>Experience</h1>
-                    {{ item[5] }}
+                    <p>{{ item[5] }}</p>
                 </div>
             </div>
         {% endfor %}
