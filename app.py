@@ -21,7 +21,7 @@ def projet(id):
 
 @app.route("/freelancers")
 def freelancers():
-    data = queryHomeFreelancer()
+    data = queryHomeFreelancers()
     return render_template('home_freelancers.html', data=data)
 
 @app.route("/freelancer/<id>")

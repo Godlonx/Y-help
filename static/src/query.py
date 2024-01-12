@@ -41,12 +41,14 @@ def queryHomeProject():
     return clearData
 
 
-def queryHomeFreelancer():
-    folders = [0,'name','summary']
+def queryHomeFreelancers():
+    folders = [0,'pseudo','level','class']
     clearData = {}
-    datas = query("SELECT idProject, name, summary FROM Project")
+    datas = query("SELECT id, pseudo, level, class FROM User")
 
     for index, data in enumerate(datas):
         clearData[folders[index]] = data
+
+    clearData["level"] = 'B'+clearData['level']+" "+clearData["class"] if int(clearData['level']) < 4 else 'Master '+clearData['level']+" "+clearData["class"]
 
     return clearData
