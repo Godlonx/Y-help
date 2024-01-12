@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#f0f0f0;
+}
+
+#favicon {
+    border-radius: 50px;
+}
+
+header {
+    z-index: 1;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    border-bottom: #bce6e2 solid 2px;
+    background-color: #fff;
+    padding-bottom: 15px;
+    box-shadow: 0px 0px 8px #9de6de;
+}
+
+header .frame {
+    width: 1243px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .frame > img {
+    width: 112px;
+    height: 45px;
+    cursor: pointer;
+}
+
+header .frame .buttons > button {
+    padding: 8px 15px;
+    border: 0;
+    background-color: #fff;
+    font-size: 1.5em;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+header .frame .buttons > button:hover {
+    cursor: pointer;
+    background-color: #e6eef7;
+}
+
+#create {
+    padding: 8px 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #10c2b0;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#create:active {
+    background-color: #0da394;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #bebebe;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+}
