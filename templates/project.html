@@ -30,21 +30,25 @@
             <div class="highlight">
                 <img src="{{data['highlight']}}" alt="not Here">
             </div>
-            <p class="summary">{{data['summary']}}</p>
+            <div class="summary">
+                <p class="summary">{{data['summary']}}</p>
+            </div>
             <div class="tags">{% for tag in data['tags'] %}<p class="tag">{{tag}}</p>{% endfor %}</div>
-            <h3>Project</h3>
-            <p class="description">{{data['description']}}</p>
+            <div class="project">
+                <h3>Project</h3>
+                <p class="description">{{data['description']}}</p>
+            </div>
         </div> 
         <div class="card">
             <img src="{{data['userpicture']}}" alt="" class="picture">
             <h1 class="name">{{data['pseudo']}}</h1>
             <h4 class="level">{{data['level']}}</h4>
-            <div class="mail info">
-                <button onclick="copy('mail')" value="{{data['email']}}" id="mail"><img src="../static/images/mail.png" alt=""></button>
+            <div class="info">
+                <button onclick="copy('mail')" value="{{data['email']}}" id="mail" class="mail"><img src="../static/images/verifier.png" alt="" id="mailValid" class="mailValid"><img src="../static/images/mail.png" alt="" id="mailLogo" class="notHide"></button>
                 <h4>{{data['email']}}</h4>
             </div>
-            <div class="phone info">
-                <button onclick="copy('phone')" value="{{data['phone']}}" id="phone"><img src="../static/images/mail.png" alt=""></button>
+            <div class="info">
+                <button onclick="copy('phone')" value="{{data['phone']}}" id="phone" class="phone"><img src="../static/images/verifier.png" alt="" id="phoneValid" class="phoneValid"><img src="../static/images/mail.png" alt="" id="phoneLogo" class="notHide"></button>
                 <h4>{{data['phone']}}</h4>
             </div>
         </div>
