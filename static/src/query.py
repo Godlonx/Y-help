@@ -48,6 +48,17 @@ def formatFiles(datas, keys):
     return clearData
 
 
+
+def insertProject(data):
+    con = sqlite3.connect('DB.db')
+    cursor = con.cursor()
+    data = (data[0], data[1], data[2], data[3], data[4], data[5])
+    cursor.execute(f"INSERT INTO Project (idProject, idLeader, name, summary, description, picture) VALUES (?, ?, ?, ?, ?, ?)", data)
+    con.commit()
+    print("inserted")
+    cursor.close()
+    con.close()
+
 def insertFreelancer(data):
     con = sqlite3.connect('DB.db')
     cursor = con.cursor()
