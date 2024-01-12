@@ -24,7 +24,7 @@ def queryProject(id):
 
     clearData['highlight'] = "/static/images/test.jpg"
     clearData['userpicture'] = "/static/images/user.png"
-    clearData["level"] = 'B'+clearData['level']+" "+clearData["class"] if int(clearData['level']) < 4 else 'Master ' +clearData['level']+" "+clearData["class"]
+    clearData["level"] = 'B' if int(clearData['level']) > 5 else 'Master '+clearData['level']+" "+clearData["class"]
     clearData["tags"] = tags
     return clearData
 
