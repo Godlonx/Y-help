@@ -5,4 +5,8 @@ def getHashPhoto(imgPath):
         hash = hashlib.sha256(f.read()).hexdigest()
     return hash
 
-print(getHashPhoto('c:/Users/Remi LAURENT/Documents/Ynov/Hackaton/Y-help/static/images/mail.png'))
+print(getHashPhoto('static\images\logo.png'))
+
+hashPhoto = getHashPhoto('static\images\logo.png')
+
+

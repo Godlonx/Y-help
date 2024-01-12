@@ -32,6 +32,22 @@
             <div class="popup" id="popup-project">
                 <h2>New Project</h2>
                 <p>Fill in the following fields:</p>
+                <form method="post">
+                    <input name="status" value="project" hidden>
+                    <div class="name">
+                        <h2>Name ?</h2>
+                        <input name="name" required>
+                    </div>
+                    <div class="summary">
+                        <h2>Summary ?</h2>
+                        <textarea name="summary" id="skill" class="skill text-box" cols="70" rows="14" required></textarea>
+                    </div>
+                    <div class="description">
+                        <h2>Description ?</h2>
+                        <textarea name="description" id="description" class="desc text-box" cols="70" rows="14" required></textarea>
+                    </div>
+                    <button type="submit">Create</button>
+                </form>
             </div>
             <button type="submit" class="btn" onclick="openPopup('popup-freelancer')">New Freelancer +</button>
             <div class="popup" id="popup-freelancer">
@@ -40,16 +56,17 @@
                     <p>Fill in the following fields:</p>
                 </div>
                 <form method="post">
+                    <input name="status" value="freelancer" hidden>
                     <div class="price">
-                        <h2>Prix</h2>
+                        <h2>Price ?</h2>
                         <input type="number" name="price" required>
                     </div>
                     <div class="skills">
-                        <h2>Tes compétences ?</h2>
+                        <h2>Skills ?</h2>
                         <textarea name="skill" id="skill" class="skill text-box" cols="70" rows="14" required></textarea>
                     </div>
                     <div class="description">
-                        <h2>Ta description</h2>
+                        <h2>My Projects ?</h2>
                         <textarea name="description" id="description" class="desc text-box" cols="70" rows="14" required></textarea>
                     </div>
                     <button type="submit">Create</button>
