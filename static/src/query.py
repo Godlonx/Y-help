@@ -12,6 +12,8 @@ def query(req):
 
     return data
 
+
+
 def queryProject(id):
     folders = ['name','summary','description','pseudo','level','class','email','phone']
     clearData = {}
@@ -22,7 +24,7 @@ def queryProject(id):
 
     clearData['highlight'] = "/static/images/test.jpg"
     clearData['userpicture'] = "/static/images/user.png"
-    clearData["level"] = 'B' if int(clearData['level']) > 5 else 'Master '+str(clearData['level'])+" "+clearData["class"]
+    clearData["level"] = 'B'+str(clearData['level'])+" "+clearData["class"] if int(clearData['level']) < 4 else 'Master '+str(clearData['level']-3)+" "+clearData["class"]
     clearData["tags"] = tags
     return clearData
 
@@ -36,12 +38,25 @@ def queryHomeProject():
 
     return clearData
 
+def queryHomeFreelancer():
+    pass
 
 def formatFiles(datas, keys):
     clearData = {}
     for index, data in enumerate(datas):
         clearData[keys[index]] = data
     return clearData
+
+
+def insertFreelancer(data):
+    con = sqlite3.connect('DB.db')
+    cursor = con.cursor()
+    data = (data[0], data[1], data[2], int(data[3]))
+    cursor.execute(f"INSERT INTO Freelancer (idUser, skill, description, price) VALUES (?, ?, ?, ?)", data)
+    con.commit()
+    print("inserted")
+    cursor.close()
+    con.close()
 
 
 

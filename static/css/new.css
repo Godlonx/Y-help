@@ -47,3 +47,11 @@
 .open-popup {
     visibility: visible;
 }
+
+.popup .title {
+    justify-self: center;
+}
+
+.container .popup .text-box {
+    resize: none;
+}

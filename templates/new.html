@@ -11,6 +11,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+        <script src="../static/js/createProject.js"></script>
+
         <link rel="icon" type="image/x-icon" href="../static/favicon/ynov.png">
         <title>New Project/Freelancer</title>
     </head>
@@ -33,15 +35,26 @@
             </div>
             <button type="submit" class="btn" onclick="openPopup('popup-freelancer')">New Freelancer +</button>
             <div class="popup" id="popup-freelancer">
-                <h2>New Freelancer</h2>
-                <p>Fill in the following fields:</p>
+                <div>
+                    <h2 class="title">New Freelancer</h2>
+                    <p>Fill in the following fields:</p>
+                </div>
+                <form method="post">
+                    <div class="price">
+                        <h2>Prix</h2>
+                        <input type="number" name="price" required>
+                    </div>
+                    <div class="skills">
+                        <h2>Tes compétences ?</h2>
+                        <textarea name="skill" id="skill" class="skill text-box" cols="70" rows="14" required></textarea>
+                    </div>
+                    <div class="description">
+                        <h2>Ta description</h2>
+                        <textarea name="description" id="description" class="desc text-box" cols="70" rows="14" required></textarea>
+                    </div>
+                    <button type="submit">Create</button>
+                </form>
             </div>
         </div>
-        <script>
-            function openPopup(id){
-                let popup = document.getElementById(id)
-                popup.classList.add("open-popup")
-            }
-        </script>
     </body>
 </html>

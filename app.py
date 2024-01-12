@@ -1,7 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from static.src.query import *
 
 app = Flask(__name__, template_folder='templates')
+
+LOCALID = 2
 
 @app.route("/")
 def home():
@@ -29,8 +31,13 @@ def freelancer(id):
     data = queryFreelancer(id)
     return render_template('freelancer.html', data=data)
 
-@app.route("/new")
+@app.route("/new", methods=('GET', 'POST'))
 def new():
+    if request.method == "POST":
+        price = request.form['price']
+        skill = request.form['skill']
+        description = request.form['description']
+        insertFreelancer((LOCALID, skill, description, price))
     return render_template('new.html')
 
 if __name__ == '__main__':
