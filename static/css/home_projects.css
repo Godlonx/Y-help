@@ -25,6 +25,7 @@
 .label button img {
     display: flex;
     justify-content: start;
+    width: 345px;
     height: 215px;
     border-radius: 15px 0px 0px 15px;
 }

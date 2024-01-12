@@ -31,10 +31,12 @@ def queryProject(id):
 
 
 def queryHomeProject():
-    datas = query("SELECT idProject, name, summary FROM Project")
+    datas = query("SELECT idProject, name, summary, picture FROM Project")
     clearData = []
     for data in datas:
-        clearData.append(formatFiles(data, [0,'name','summary']))
+        clearData.append(formatFiles(data, [0,'name','summary','picture']))
+
+    print(clearData)
 
     return clearData
 
@@ -85,9 +87,6 @@ def queryHomeFreelancers():
 
 def queryFreelancer(id):
     datas = query("SELECT u.pseudo, u.level, u.class, f.price, f.skill, f.description FROM User as u JOIN Freelancer as f ON f.idUser = u.id WHERE u.id="+id)[0]
-
     clearData = formatFiles(datas, ['pseudo','level','class','price','skill','description'])
-    print("\n\n\n\n\n\n", clearData, "\n\n\n\n\n\n")
     clearData["level"] = 'B'+str(clearData['level'])+" "+clearData["class"] if int(clearData['level']) < 4 else 'M'+str(clearData['level']-3)+" "+clearData["class"]
-
     return clearData

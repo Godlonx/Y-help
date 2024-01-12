@@ -28,7 +28,7 @@
         <div class="label">
             {% for project in data %}
                 <button onclick='window.location.href="/project/{{project[0]}}"'>
-                    <img src="../static/images/project-icon.png" alt="project-icon">
+                    <img src='static/images/highlights/{{ project["picture"] }}.png' alt="project-icon">
                     <div class="text">
                         <h1>{{ project['name'] }}</h1>
                         <p>{{ project['summary'] }}</p>
