@@ -119,26 +119,26 @@ Quelle est l''origine du projet ? :
 Nicolas Calpetard (Master 2 3D/Jeu vidéo) est à l''origine de ce projet, il se place en tant que client au sein de ce projet et m''a confié la direction de ce projet.');
 
 INSERT INTO User (id, pseudo, email, level, class, phone, mdpHash) VALUES
-(1, 'user1', 'user1@example.com', 3, 'Informatique', '12345678', 'hash123'),
-(2, 'user2', 'user2@example.com', 2, 'Audiovisuel', '87654321', 'hash456'),
-(3, 'user3', 'user3@example.com', 5, 'Market-Communication', '13579246', 'hash789'),
-(4, 'user4', 'user4@example.com', 4, '3D-Animation', '64293715', 'hashabc'),
-(5, 'user5', 'user5@example.com', 1, 'Web-Design', '98765432', 'hashdef'),
-(6, 'user6', 'user6@example.com', 3, 'Informatique', '56473829', 'hashghi'),
-(7, 'user7', 'user7@example.com', 2, 'Audiovisuel', '29384756', 'hashjkl'),
-(8, 'user8', 'user8@example.com', 4, 'Market-Communication', '71829364', 'hashmno'),
-(9, 'user9', 'user9@example.com', 1, '3D-Animation', '38475691', 'hashpqr'),
-(10, 'user10', 'user10@example.com', 5, 'Web-Design', '92736485', 'hashtuv'),
-(11, 'user11', 'user11@example.com', 3, 'Informatique', '65748392', 'hashwxy'),
-(12, 'user12', 'user12@example.com', 2, 'Audiovisuel', '29485736', 'hashzab'),
-(13, 'user13', 'user13@example.com', 4, 'Market-Communication', '18273645', 'hashcde'),
-(14, 'user14', 'user14@example.com', 1, '3D-Animation', '93847561', 'hashfgh'),
-(15, 'user15', 'user15@example.com', 5, 'Web-Design', '50617283', 'hashijk'),
-(16, 'user16', 'user16@example.com', 4, 'Informatique', '39485712', 'hashlmn'),
-(17, 'user17', 'user17@example.com', 1, 'Audiovisuel', '92837465', 'hashopq'),
-(18, 'user18', 'user18@example.com', 3, 'Market-Communication', '64758392', 'hashrst'),
-(19, 'user19', 'user19@example.com', 2, '3D-Animation', '38475629', 'hashuvw'),
-(20, 'user20', 'user20@example.com', 5, 'Web-Design', '71928436', 'hashxyz');
+(1, 'user1', 'user1@example.com', 3, 'Informatique', '1234567850', 'hash123'),
+(2, 'user2', 'user2@example.com', 2, 'Audiovisuel', '8765432150', 'hash456'),
+(3, 'user3', 'user3@example.com', 5, 'Market-Communication', '1357924650', 'hash789'),
+(4, 'user4', 'user4@example.com', 4, '3D-Animation', '6429371550', 'hashabc'),
+(5, 'user5', 'user5@example.com', 1, 'Web-Design', '9876543250', 'hashdef'),
+(6, 'user6', 'user6@example.com', 3, 'Informatique', '5647382950', 'hashghi'),
+(7, 'user7', 'user7@example.com', 2, 'Audiovisuel', '2938475650', 'hashjkl'),
+(8, 'user8', 'user8@example.com', 4, 'Market-Communication', '7182936450', 'hashmno'),
+(9, 'user9', 'user9@example.com', 1, '3D-Animation', '3847569150', 'hashpqr'),
+(10, 'user10', 'user10@example.com', 5, 'Web-Design', '9273648550', 'hashtuv'),
+(11, 'user11', 'user11@example.com', 3, 'Informatique', '6574839250', 'hashwxy'),
+(12, 'user12', 'user12@example.com', 2, 'Audiovisuel', '2948573650', 'hashzab'),
+(13, 'user13', 'user13@example.com', 4, 'Market-Communication', '1827364550', 'hashcde'),
+(14, 'user14', 'user14@example.com', 1, '3D-Animation', '9384756150', 'hashfgh'),
+(15, 'user15', 'user15@example.com', 5, 'Web-Design', '5061728350', 'hashijk'),
+(16, 'user16', 'user16@example.com', 4, 'Informatique', '3948571250', 'hashlmn'),
+(17, 'user17', 'user17@example.com', 1, 'Audiovisuel', '9283746550', 'hashopq'),
+(18, 'user18', 'user18@example.com', 3, 'Market-Communication', '6475839250', 'hashrst'),
+(19, 'user19', 'user19@example.com', 2, '3D-Animation', '3847562950', 'hashuvw'),
+(20, 'user20', 'user20@example.com', 5, 'Web-Design', '7192843650', 'hashxyz');
 
 -- Sample data for Tag table
 INSERT INTO Tag (id, name) VALUES
