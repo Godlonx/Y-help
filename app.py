@@ -5,7 +5,7 @@ from static.src.photo import *
 app = Flask(__name__, template_folder='templates')
 
 LOCALID = 21
-LOCALIDPROJECT = 3
+LOCALIDPROJECT = 4
 
 @app.route("/")
 def home():
