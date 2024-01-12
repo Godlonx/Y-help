@@ -7,12 +7,9 @@ def query(req):
     
     cur.execute(req)
     data = cur.fetchall()
-    print(data)
     con.close()
 
-    cleaned_data = [str(item) for item in data[0]]
-
-    return cleaned_data
+    return data
 
 
 
@@ -26,15 +23,13 @@ def queryProject(id):
 
     clearData['highlight'] = "/static/images/test.jpg"
     clearData['userpicture'] = "/static/images/user.png"
-    clearData["level"] = 'B' if int(clearData['level']) > 5 else 'Master '+str(clearData['level'])+" "+clearData["class"]
+    clearData["level"] = 'B'+str(clearData['level'])+" "+clearData["class"] if int(clearData['level']) < 4 else 'Master '+str(clearData['level']-3)+" "+clearData["class"]
     clearData["tags"] = tags
     return clearData
 
 
 
 def queryHomeProject():
-    folders = [0,'name','summary']
-    clearData = {}
     datas = query("SELECT idProject, name, summary FROM Project")
     clearData = []
     for data in datas:
@@ -42,9 +37,22 @@ def queryHomeProject():
 
     return clearData
 
+def queryHomeFreelancer():
+    pass
 
 def formatFiles(datas, keys):
     clearData = {}
     for index, data in enumerate(datas):
         clearData[keys[index]] = data
     return clearData
+
+
+def insertFreelancer(data):
+    con = sqlite3.connect('DB.db')
+    cursor = con.cursor()
+    data = (data[0], data[1], data[2], int(data[3]))
+    cursor.execute(f"INSERT INTO Freelancer (idUser, skill, description, price) VALUES (?, ?, ?, ?)", data)
+    con.commit()
+    print("inserted")
+    cursor.close()
+    con.close()

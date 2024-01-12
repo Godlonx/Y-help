@@ -21,7 +21,7 @@ Quelle est l''origine du projet ? :
 Le projet est né de la volonté de permettre à des passionnés de créer ce qu''ils aiment avec une petite équipe d''amis déterminés. 
 
 L''objectif est de s''amuser tout en réussissant à créer un jeu qui réponde à nos attentes en tant que joueurs.'),
-    (98, 'Big Drill', 'Big Drill est un jeu vidéo de gestion, où le joueur doit conduire des véhicules et gérer ses employés, pour exploiter des mines sur une planète désertique.', 'C''est quoi ton projet ? Présente le :
+    (18, 'Big Drill', 'Big Drill est un jeu vidéo de gestion, où le joueur doit conduire des véhicules et gérer ses employés, pour exploiter des mines sur une planète désertique.', 'C''est quoi ton projet ? Présente le :
 
 BIG Drill est un jeu vidéo qui se déroule sur une planète désertique bien loin de la Terre dont les dunes massives sont aussi peu hospitalières que ses profondeurs regorgent de minéraux précieux. Le joueur arrive sur cette planète dans le but de monter une entreprise d’excavation de matériaux, dans un premier temps tout seul, puis peu à peu aidé par des employés auxquels il faudra assigner des postes, ordonner des actions et dont il faudra gérer les besoins en eau, climatisation, sommeil, etc… 
 
@@ -40,7 +40,7 @@ Les origines de BIG Drill proviennent d''une envie d''allier certains styles de 
 Le monde nous est venu en nous inspirant divers univers tels que l''univers de Dune pour sa planète désertique, de Destiny pour son époque hybride moderne/futuriste, et de Satisfactory, pour ne citer que les principaux. 
 
 La raison pour laquelle nous avons décidé de proposer ce projet comme projet Ydays, est l''envie de monter en compétences sur la gestion de projets, mais aussi de tenter l''expérience de simuler un studio de jeux vidéo indépendant. Nous souhaitons aller de la production à la communication, car il s''agit d''un projet qui peut nous apporter beaucoup d''expérience sans risque. Nous sommes donc dans une logique d''apprentissage.'),
-    (34, 'Legends of Arena', 'Un jeu de combat en arène stratégique et passionnant ! Incarnez des classes de guerriers légendaires du monde entier à travers des auras magiques. Choisissez parmi une variété de classes RPG classiques, développez vos compétences, équipez-vous et battez-vous pour la gloire !', 'C''est quoi ton projet ? Présente le : :
+    (4, 'Legends of Arena', 'Un jeu de combat en arène stratégique et passionnant ! Incarnez des classes de guerriers légendaires du monde entier à travers des auras magiques. Choisissez parmi une variété de classes RPG classiques, développez vos compétences, équipez-vous et battez-vous pour la gloire !', 'C''est quoi ton projet ? Présente le : :
 
 Mon projet est un jeu vidéo intitulé "Legends of Arena". Il s''agit d''un jeu de combat en arène stratégique qui offre aux joueurs la possibilité de s''incarner dans des classes emblématiques à travers des auras magiques. Ces classes sont inspirées des guerriers légendaires de différentes cultures et époques, leur permettant de plonger dans des rôles de combattants historiques.
 
@@ -79,7 +79,7 @@ Je suis déterminé à développer "Legends of Arena" en gardant à l''esprit le
 
 
 En résumé, "Legends of Arena" est un projet passionnant qui vise à allier l''excitation des combats en arène avec des mécanismes stratégiques profonds, tout en célébrant la richesse de la mythologie et de l''histoire à travers des combattants légendaires de différentes cultures et époques. Mon objectif est de créer un jeu qui captivera les joueurs et leur offrira une expérience de jeu unique et immersive dans l''arène du colisée."'),
-    (273, 'Mordus game', 'Mordus est un jeu de type “souls like” dans un univers désertique inspiré par le Moyen Orient. Mordus est un jeu semi narratif hardcore , promouvant une difficulté de jeu assez élevé. Il comporte plusieurs races, des combats de boss épiques et un système d’équipement complet. Il offre aux nouveaux joueurs un challenge complet et aux joueurs aguerris un vent de fraîcheur dans le genre.', 'C''est quoi ton projet ? Présente le :
+    (3, 'Mordus game', 'Mordus est un jeu de type “souls like” dans un univers désertique inspiré par le Moyen Orient. Mordus est un jeu semi narratif hardcore , promouvant une difficulté de jeu assez élevé. Il comporte plusieurs races, des combats de boss épiques et un système d’équipement complet. Il offre aux nouveaux joueurs un challenge complet et aux joueurs aguerris un vent de fraîcheur dans le genre.', 'C''est quoi ton projet ? Présente le :
 
 Mordus est un jeu de type « souls-like », qui se
 déroule dans une contrée fictive appelé « Rehadam ». C’est un jeu semi narratif hardcore, qui
@@ -102,7 +102,7 @@ projet sérieux/concret pour les personnes de la filière 3D. Le but est d’avo
 un projet valorisant et se rapprochant du milieu professionnel, afin de
 renforcer un portefolio ou un CV.'),
 
-(496, 'Inkarnation', 'Ce projet a pour but de réaliser un jeu de rôle (type donjons et dragons) en format jeu de cartes, qui puisse être sorti en plusieurs tirages à la fin de la première année.', 'C''est quoi ton projet ? Présente le :
+(6, 'Inkarnation', 'Ce projet a pour but de réaliser un jeu de rôle (type donjons et dragons) en format jeu de cartes, qui puisse être sorti en plusieurs tirages à la fin de la première année.', 'C''est quoi ton projet ? Présente le :
 
 Le but du projet est de réaliser un jeu permettant aux non-initiés de découvrir les jeux de rôles sans avoir besoin d''un maître du jeu tout en ayant un cadre défini. 
 
@@ -140,7 +140,6 @@ INSERT INTO User (id, pseudo, email, level, class, phone, mdpHash) VALUES
 (19, 'user19', 'user19@example.com', 2, '3D-Animation', '3847562950', 'hashuvw'),
 (20, 'user20', 'user20@example.com', 5, 'Web-Design', '7192843650', 'hashxyz');
 
--- Sample data for Tag table
 INSERT INTO Tag (id, name) VALUES
 (1, 'Programming'),
 (2, 'Design'),
@@ -158,7 +157,6 @@ INSERT INTO Tag (id, name) VALUES
 (14, 'IoT'),
 (15, 'Blockchain');
 
--- Sample data for TagRelation table
 INSERT INTO TagRelation (idProject, idTag) VALUES
 (1, 1),
 (1, 3),
