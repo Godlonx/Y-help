@@ -18,8 +18,7 @@ def queryProject(id):
     datas = query(f"SELECT p.name, p.summary, p.description, u.pseudo, u.level, u.class, u.email, u.phone FROM Project as p JOIN User as u ON u.id = p.idLeader WHERE p.idProject = {id}")[0]
     tags = query(f"SELECT tag.name FROM Tag JOIN TagRelation ON tag.id = TagRelation.idTag WHERE TagRelation.idProject = {id}")
     tags = ['#'+tag[0] for tag in tags]
-    for index, data in enumerate(datas):
-        clearData[folders[index]] = data
+    clearData = formatFiles(datas, folders)
 
     clearData['highlight'] = "/static/images/test.jpg"
     clearData['userpicture'] = "/static/images/user.png"
@@ -28,11 +27,15 @@ def queryProject(id):
     return clearData
 
 def queryHomeProject():
-    folders = [0,'name','summary']
-    clearData = {}
     datas = query("SELECT idProject, name, summary FROM Project")[0]
 
-    for index, data in enumerate(datas):
-        clearData[folders[index]] = data
+    clearData = formatFiles(datas, [0,'name','summary'])
 
+    return clearData
+
+
+def formatFiles(datas, keys):
+    clearData = {}
+    for index, data in enumerate(datas):
+        clearData[keys[index]] = data
     return clearData
