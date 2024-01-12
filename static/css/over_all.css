@@ -11,6 +11,10 @@ body {
     background-color:#f0f0f0;
 }
 
+#favicon {
+    border-radius: 50px;
+}
+
 header {
     z-index: 1;
     width: 100vw;
