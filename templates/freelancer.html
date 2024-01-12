@@ -14,9 +14,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <link rel="icon" type="image/x-icon" href="../static/favicon/ynov.png">
-        {% for item in data %}
-            <title>{{ item[0] }}</title>
-        {% endfor %}
+        <title>{{ data['pseudo'] }}</title>
     </head>
     <body>
         <header>
@@ -29,27 +27,25 @@
                 <button id="create" onclick="window.location.href='/new'">New +</button>
             </div>
         </header>
-        {% for item in data %}
             <div class="container">
                 <div class="card">
                     <img src="../static/images/user.png" alt="user-photo">
-                    <div><h1>{{ item[0] }}</h1></div>
-                    <div><h4>{{ item[1] }} {{ item[2] }}</h4></div>
+                    <div><h1>{{ data['pseudo'] }}</h1></div>
+                    <div><h4>{{ data['level'] }}</h4></div>
                     <span class="fa fa-star checked fa-2x"></span>
                     <span class="fa fa-star checked fa-2x"></span>
                     <span class="fa fa-star checked fa-2x"></span>
                     <span class="fa fa-star checked fa-2x"></span>
                     <span class="fa fa-star notchecked fa-2x"></span><br>
-                    <div class="ratePerHour">{{ item[3] }}€/h</div>
+                    <div class="ratePerHour">{{ data['price'] }}€/h</div>
                     <button>Contact</button>
                 </div>
                 <div class="description">
                     <h1>Skills</h1>
-                    <p>{{ item[4] }}</p>
+                    <p>{{ data['skill'] }}</p>
                     <h1>Experience</h1>
-                    <p>{{ item[5] }}</p>
+                    <p>{{ data['description'] }}</p>
                 </div>
             </div>
-        {% endfor %}
     </body>
 </html>
