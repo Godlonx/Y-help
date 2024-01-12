@@ -19,8 +19,12 @@ body {
     border-radius: 30px;
 }
 
+.primary h1 {
+    margin-bottom: 25px;
+}
+
 .board .primary .summary {
-    margin-top: 20px;
+    margin-top: 35px;
     font-size: 15px;
 }
 
@@ -33,7 +37,7 @@ body {
 
 .board .primary .highlight img {
     height: 100%;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 .board .primary .tags {
