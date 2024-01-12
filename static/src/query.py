@@ -27,9 +27,10 @@ def queryProject(id):
     return clearData
 
 def queryHomeProject():
-    datas = query("SELECT idProject, name, summary FROM Project")[0]
-
-    clearData = formatFiles(datas, [0,'name','summary'])
+    datas = query("SELECT idProject, name, summary FROM Project")
+    clearData = []
+    for data in datas:
+        clearData.append(formatFiles(data, [0,'name','summary']))
 
     return clearData
 
