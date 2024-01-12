@@ -27,18 +27,20 @@
             </div>
         </header>
         <div class="label">
-            <button onclick="window.location.href='/freelancer/{{data[0]}}'">
-                <img src="../static/images/user.png" alt="project-icon">
-                <div class="text">
-                    <h1>{{ data['pseudo'] }}</h1>
-                    <h4>{{ data['level'] }}</h4>
-                    <span class="fa fa-star checked fa-2x"></span>
-                    <span class="fa fa-star checked fa-2x"></span>
-                    <span class="fa fa-star checked fa-2x"></span>
-                    <span class="fa fa-star checked fa-2x"></span>
-                    <span class="fa fa-star notchecked fa-2x"></span>
-                </div>
-            </button>
+            {% for item in data %}
+                <button onclick="window.location.href='/freelancer/{{item[0]}}'">
+                    <img src="../static/images/user.png" alt="project-icon">
+                    <div class="text">
+                        <h1>{{ item[1] }}</h1>
+                        <h4>{{ item[2] }}</h4>
+                        <span class="fa fa-star checked fa-2x"></span>
+                        <span class="fa fa-star checked fa-2x"></span>
+                        <span class="fa fa-star checked fa-2x"></span>
+                        <span class="fa fa-star checked fa-2x"></span>
+                        <span class="fa fa-star notchecked fa-2x"></span>
+                    </div>
+                </button>
+            {% endfor %}
             <!--
             <button onclick="window.location.href='/freelancer/1'">
                 <img src="../static/images/user.png" alt="project-icon">

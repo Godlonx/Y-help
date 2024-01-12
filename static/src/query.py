@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import sqlite3
+import numpy as np
 
 def query(req):
     con = sqlite3.connect("DB.db")
@@ -30,27 +31,26 @@ def queryProject(id):
 
 
 def queryHomeProject():
-    folders = [0,'name','summary']
-    clearData = {}
     datas = query("SELECT idProject, name, summary FROM Project")[0]
+    return datas
 
-    for index, data in enumerate(datas):
-        clearData[folders[index]] = data
-
-    return clearData
 
 
 def queryHomeFreelancers():
-    folders = [0,'pseudo','level','class']
-    clearData = {}
     datas = query("SELECT id, pseudo, level, class FROM User")
-
     print("\n\n\n=====BRUTE=====", datas, "\n\n\n")
 
-    #tags = ['#'+str(item) for item in data[0]]
-    for index, data in enumerate(datas):
-        clearData[folders[index]] = data
+    #datas[2] = 'B'+datas[2]+" "+datas[3] if int(datas[2]) < 4 else 'Master '+datas[2]+" "+datas[3]
 
-    clearData["level"] = 'B'+clearData['level']+" "+clearData["class"] if int(clearData['level']) < 4 else 'Master '+clearData['level']+" "+clearData["class"]
+    return datas
 
-    return clearData
+
+
+def queryFreelancer(id):
+    userData = query("SELECT pseudo, level, class FROM User WHERE id="+id)
+    freelancerData = query("SELECT price, skill, description FROM Freelancer WHERE idUser="+id)
+    datas = userData + freelancerData
+    np.concatenate((userData, freelancerData))
+    print("\n\n\n=====BRUTE=====", datas, "\n\n\n")
+
+    return datas
