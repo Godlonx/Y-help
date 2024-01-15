@@ -7,6 +7,6 @@ def getHashPhoto(imgPath):
 
 print(getHashPhoto('static\images\logo.png'))
 
-hashPhoto = getHashPhoto('static\images\logo.png')
+hashPicture = getHashPhoto('static\images\highlight\hades.png')
 
 
