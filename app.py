@@ -1,12 +1,13 @@
 from flask import Flask, render_template, request
 from static.src.query import *
+from static.src.photo import *
 
 app = Flask(__name__, template_folder='templates')
 app.config['UPLOAD_FOLDER'] = 'static\images\highlight'
 ALLOWED_EXTENSIONS = {'jpg', 'jpeg', 'png'}
 
 LOCALID = 21
-LOCALIDPROJECT = 11
+LOCALIDPROJECT = 4
 
 @app.route("/")
 def home():
@@ -41,13 +42,12 @@ def freelancer(id):
 def new():
     if request.method == "POST":
         status = request.form['status']
-
         if status == "project":
             name = request.form['name']
+            picture = getPicture(request)
             summary = request.form['summary']
             description = request.form['description']
-            insertProject((LOCALIDPROJECT, 4, name, summary, description, "test"))
-
+            insertProject((LOCALIDPROJECT, 4, name, summary, description, picture))
         elif status == "freelancer":
             price = request.form['price']
             skill = request.form['skill']

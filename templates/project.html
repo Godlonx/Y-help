@@ -22,14 +22,14 @@
                 <button onclick="window.location.href='/projects'">Projects</button>
                 <button onclick="window.location.href='/freelancers'">Freelancers</button>
             </div>
-            <button id="create" onclick="window.location.href='/new'">New +</button>
+            <button id="new" onclick="window.location.href='/new'">New +</button>
         </div>
     </header>
     <div class="board">
         <div class="primary">
             <h1 class="title">{{data['name']}}</h1>
             <div class="highlight">
-                <img src="{{data['highlight']}}" alt="not Here">
+                <img src='../static/images/highlights/{{ data['picture'] }}.png' alt="project">
             </div>
             <div class="summary">
                 <p class="summary">{{data['summary']}}</p>

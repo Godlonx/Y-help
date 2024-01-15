@@ -5,17 +5,17 @@ body {
 .board {
     margin-top: 100px;
     /* outline: orange solid 3px; */
-    margin-left: 70px;
-    width: 70vw;
+
+    width: 1243px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .primary {
     /* background-color: #EC4363; */
     /* background-color: #666666; */
-    padding: 10px;
-    width: 50vw;
+    width: 900px;
     border-radius: 30px;
 }
 
@@ -25,12 +25,11 @@ body {
 
 .board .primary .summary {
     margin-top: 35px;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .board .primary .highlight {
     display: flex;
-    justify-content: center;
     /* background-color: #D9D9D9; */
     height: 25vw;
 }
@@ -44,9 +43,9 @@ body {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    margin-left: 25px;
     margin-top: 20px;
     color: #12C5FE;
+    font-size: 20px;
 }
 
 .board .primary .project {
@@ -54,23 +53,25 @@ body {
 }
 
 .board .primary .project h3 {
-    font-size: 20px;
+    margin-top: 50px;
+    font-size: 25px;
 }
 
 .board .primary .project .description {
-    font-size: 18px;
+    font-size: 20px;
+    margin-bottom: 100px;
 }
 
 .card {
     width: 300px;
-    padding: 15px;
+    padding-top: 15px;
     height: 350px;
     border-radius: 25px;
     /* border-bottom-left-radius: 0px; */
 }
 
 .card .picture {
-    width: 250px;
+    width: 300px;
     border-radius: 15px;
     box-shadow: 0px 0px 10px #acb0b8;
 }
@@ -81,7 +82,7 @@ body {
 }
 
 .card h4 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     color: #808080;
 }
@@ -91,7 +92,7 @@ body {
 }
 
 .card .info {
-    margin-top: 15px;
+    margin-top: 25px;
     display: flex;
     flex-direction: row;
     align-items: center;
